@@ -1,0 +1,1320 @@
+/* ==========================================================================
+   COMPONENTES DE INTERFAZ DE USUARIO (UI COMPONENTS)
+   Materia: Tecnologías Web I [SIS-214] — Universidad Católica Boliviana (UCB)
+   Estudiante: Ing. Antonio Alexander Vargas Sosa
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. MODAL NATIVO HTML5 (<dialog>)
+   -------------------------------------------------------------------------- */
+dialog {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 0;
+  max-width: 560px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+}
+
+dialog::backdrop {
+  background: rgba(2, 31, 15, 0.88);
+  backdrop-filter: blur(5px);
+}
+
+.dialog-card {
+  padding: 2rem;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.dialog-header h3 {
+  color: var(--color-10);
+}
+
+.btn-close-dialog {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn-close-dialog:hover {
+  color: var(--color-10);
+}
+
+.dialog-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6rem 1.2rem;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+.dialog-details dt {
+  color: var(--color-30);
+  font-weight: 600;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* --------------------------------------------------------------------------
+   2. TARJETAS SEMÁNTICAS UNIVERSALES
+   -------------------------------------------------------------------------- */
+.content-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: calc(var(--header-height) + 2rem);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.content-card:hover {
+  border-color: var(--color-30);
+  box-shadow: var(--shadow-md);
+}
+
+.content-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.1rem;
+  color: var(--text-bright);
+}
+
+/* --------------------------------------------------------------------------
+   3. SECCIÓN HERO & ASIDE DE DISPONIBILIDAD
+   -------------------------------------------------------------------------- */
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  background-image: radial-gradient(circle at top right, rgba(50, 116, 109, 0.15), transparent 60%);
+}
+
+.profile-avatar-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-avatar {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-30);
+  box-shadow: var(--shadow-glow);
+}
+
+.hero-badges-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.hero-badge {
+  background: rgba(50, 116, 109, 0.28);
+  color: #E0F7F4;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(50, 116, 109, 0.50);
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-30);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--text-bright);
+}
+
+.hero-motto {
+  font-size: 1.1rem;
+  color: var(--color-10);
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-pill {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.contact-info-pill a {
+  color: var(--color-10);
+  font-weight: 500;
+}
+
+.contact-info-pill a:hover {
+  color: #A2EBE3;
+}
+
+/* Aside de Disponibilidad: Grid DT / DD */
+.availability-aside {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  border-left: 4px solid var(--color-30);
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: calc(var(--header-height) + 2rem);
+}
+
+.availability-aside h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.1rem;
+  color: var(--color-10);
+}
+
+.availability-dl {
+  display: grid;
+  grid-template-columns: minmax(170px, max-content) 1fr;
+  gap: 0.8rem 1.6rem;
+  font-size: 0.95rem;
+}
+
+.availability-dl dt {
+  color: var(--color-10);
+  font-weight: 700;
+  grid-column: 1;
+}
+
+.availability-dl dd {
+  color: var(--text-primary);
+  grid-column: 2;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. BOTONES DEL SISTEMA DE DISEÑO
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--grad-btn);
+  color: var(--accent-contrast);
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 0 26px var(--accent-glow);
+  color: var(--accent-contrast);
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-30);
+  color: #FFFFFF;
+  background: rgba(50, 116, 109, 0.25);
+}
+
+.btn-sm {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECCIÓN SOBRE MÍ: PROGRESS, DETAILS, TIMELINE Y TABLA
+   -------------------------------------------------------------------------- */
+.highlights-list {
+  margin: 1.25rem 0 1.5rem 1.5rem;
+  color: var(--text-secondary);
+}
+
+.highlights-list li {
+  margin-bottom: 0.5rem;
+}
+
+.quote-card {
+  border-left: 4px solid var(--color-30);
+  padding: 1.2rem 1.6rem;
+  background: rgba(50, 116, 109, 0.15);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.quote-card p {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.quote-card footer {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-30);
+  font-style: normal;
+}
+
+/* Barras de Progreso (<progress>) */
+.progress-block {
+  margin: 1.35rem 0;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+progress.custom-progress {
+  width: 100%;
+  height: 12px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: none;
+  background: var(--bg-tertiary);
+}
+
+progress.custom-progress::-webkit-progress-bar {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+}
+
+progress.custom-progress::-webkit-progress-value {
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+}
+
+progress.custom-progress::-moz-progress-bar {
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Desplegable (<details>) */
+.academic-details {
+  margin-top: 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem;
+}
+
+.academic-details summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-30);
+}
+
+.academic-details summary:hover {
+  color: var(--color-10);
+}
+
+.academic-details ul {
+  margin: 1rem 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Línea de Tiempo (<ol class="timeline-list">) */
+.timeline-list {
+  list-style: none;
+  position: relative;
+  padding-left: 1.75rem;
+  border-left: 2px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.timeline-item {
+  margin-bottom: 1.75rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.25rem;
+  top: 0.3rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-10);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.timeline-item header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item h4 {
+  font-size: 1.15rem;
+  color: var(--text-bright);
+}
+
+.timeline-item time {
+  font-size: 0.85rem;
+  color: var(--color-30);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.timeline-item p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Tabla de Idiomas con <meter> */
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table thead th {
+  background: var(--bg-tertiary);
+  color: var(--color-10);
+  font-weight: 700;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(50, 116, 109, 0.15);
+}
+
+meter {
+  width: 110px;
+  height: 14px;
+  accent-color: var(--color-30);
+}
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN EXPERIENCIA & HABILIDADES
+   -------------------------------------------------------------------------- */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-card {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.company-name {
+  color: var(--color-30);
+  font-size: 0.95rem;
+}
+
+.experience-time {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--bg-tertiary);
+  color: var(--color-10);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.task-list {
+  margin: 1rem 0 0 1.5rem;
+  color: var(--text-secondary);
+}
+
+.task-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Grilla de Habilidades Técnicas */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.skill-category h4 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: var(--color-30);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.4rem;
+}
+
+.skill-list {
+  list-style: none;
+}
+
+.skill-list li {
+  margin-bottom: 1.25rem;
+}
+
+.skill-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.meter-bar {
+  width: 100%;
+  height: 10px;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   7. BANNER DE MÉTRICAS INSTITUCIONALES (GSAP COUNTERS)
+   -------------------------------------------------------------------------- */
+.stats-banner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad-primary);
+  opacity: 0.8;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-10);
+  box-shadow: var(--shadow-glow);
+}
+
+.stat-number {
+  font-family: var(--font-digital), var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-10);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.stat-number::after {
+  content: '+';
+  font-size: 1.8rem;
+  color: var(--color-30);
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   8. LIENZO INTERACTIVO CHART.JS (HABILIDADES)
+   -------------------------------------------------------------------------- */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 1.75rem auto 0;
+  padding: 1.25rem;
+  background: rgba(2, 31, 15, 0.50);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="light"] .chart-container {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   9. BUSCADOR EN TIEMPO REAL & PORTAFOLIO DE PROYECTOS
+   -------------------------------------------------------------------------- */
+.search-filter-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-filter-box .filter-label {
+  font-weight: 700;
+  color: var(--color-10);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.search-filter-box input[type="search"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-bright);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-filter-box input[type="search"]:focus {
+  border-color: var(--color-10);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.search-filter-box input[type="search"]::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.filter-hint {
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--color-30);
+  margin: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-10);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card--empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-msg {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.project-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-30);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  margin: 0.35rem 0 0.75rem;
+  color: var(--text-bright);
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.project-tech-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tech-tags li {
+  font-size: 0.75rem;
+  background: var(--bg-tertiary);
+  color: var(--color-10);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   10. REPRODUCTORES MULTIMEDIA (<audio> Y <video>) & GALERÍA
+   -------------------------------------------------------------------------- */
+.multimedia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.media-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-card figcaption {
+  margin-bottom: 1rem;
+}
+
+.media-card figcaption strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-10);
+}
+
+.media-card figcaption small {
+  color: var(--text-secondary);
+}
+
+.native-player {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  background: #000;
+}
+
+.audio-player {
+  margin-top: auto;
+}
+
+.video-player {
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.video-player-extended {
+  max-height: 600px;
+  height: 520px;
+  object-fit: contain;
+  background: #000;
+}
+
+.video-player-fit {
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  background: #000;
+}
+
+.section-audio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.audio-header-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.audio-header-player {
+  flex-shrink: 0;
+  min-width: 280px;
+}
+
+.audio-inline-player {
+  height: 42px;
+}
+
+.gallery-item {
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-10);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.85rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.gallery-img-extended {
+  height: 380px;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover .gallery-img {
+  filter: brightness(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   11. SECCIÓN SERVICIOS & FORMULARIO ACCESIBLE
+   -------------------------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-30);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-icon {
+  font-size: 2.3rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-10);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Formulario Accesible */
+.contact-form-card {
+  border-left: 4px solid var(--color-10);
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-10);
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.required {
+  color: var(--color-10);
+}
+
+.field-help {
+  font-size: 0.8rem;
+  color: var(--color-30);
+}
+
+/* Mensajes de error en tiempo real (validación input) */
+.field-error {
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+/* Estilos de validación en tiempo real */
+input.is-valid,
+textarea.is-valid {
+  border-color: var(--secondary-color) !important;
+  box-shadow: 0 0 0 2px rgba(50, 116, 109, 0.35);
+}
+
+input.is-invalid,
+textarea.is-invalid {
+  border-color: #ff6b6b !important;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.25);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-10);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.25rem;
+  accent-color: var(--color-30);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* Área de feedback accesible (<output>) */
+.form-feedback {
+  display: none;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.form-feedback.is-visible {
+  display: block;
+}
+
+.form-feedback.is-success {
+  background: rgba(50, 116, 109, 0.25);
+  border: 1px solid var(--secondary-color);
+  color: #E0F7F4;
+}
+
+.form-feedback.is-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+
+/* --------------------------------------------------------------------------
+   13. TOAST DE CONECTIVIDAD (ONLINE / OFFLINE)
+   -------------------------------------------------------------------------- */
+.connectivity-toast {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(14px);
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 10000;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+  animation: slideToastIn 0.35s ease;
+}
+
+.connectivity-toast.is-offline {
+  border-color: #ef4444;
+  color: #fca5a5;
+  background: rgba(127, 29, 29, 0.88);
+}
+
+.connectivity-toast.is-online {
+  border-color: #22c55e;
+  color: #86efac;
+  background: rgba(20, 83, 45, 0.88);
+}
+
+/* --------------------------------------------------------------------------
+   14. WIDGETS INTEGRADOS DE LA SUITE DE 11 LIBRERÍAS (WEB08)
+   -------------------------------------------------------------------------- */
+
+/* A. Widget Day.js: Estado en Vivo y Reloj */
+.live-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.4rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, rgba(10, 52, 58, 0.85) 0%, rgba(2, 31, 15, 0.95) 100%);
+  border-left: 4px solid var(--color-10);
+  border-radius: var(--radius-md);
+}
+
+.live-status-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.live-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.live-datetime-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.live-experience-pill {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: rgba(56, 163, 148, 0.2);
+  color: var(--color-10);
+  border: 1px solid rgba(56, 163, 148, 0.35);
+  font-weight: 600;
+}
+
+/* B. Widget Axios: Telemetría Meteorológica */
+.weather-card {
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--color-10);
+}
+
+.weather-card-header h3 {
+  color: var(--color-10);
+  margin-bottom: 0.3rem;
+}
+
+.clima-box {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: rgba(2, 31, 15, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+[data-theme="light"] .clima-box {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.clima-success-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.clima-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: rgba(10, 52, 58, 0.65);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(56, 163, 148, 0.2);
+}
+
+[data-theme="light"] .clima-item {
+  background: #f1f5f9;
+}
+
+.clima-icon {
+  font-size: 1.8rem;
+}
+
+.clima-value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-10);
+}
+
+.clima-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.clima-meta {
+  grid-column: 1 / -1;
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* C. Widget DataTables.js: Auditoría de Certificaciones */
+.table-card {
+  margin-top: 2rem;
+}
+
+.table-card-header h3 {
+  color: var(--color-10);
+  margin-bottom: 0.3rem;
+}
+
+.dataTables_wrapper {
+  color: var(--text-primary) !important;
+  font-size: 0.9rem;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+  color: var(--text-secondary) !important;
+  margin: 0.8rem 0;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  background: rgba(10, 52, 58, 0.8) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--text-bright) !important;
+  padding: 0.35rem 0.75rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: var(--text-primary) !important;
+  background: rgba(10, 52, 58, 0.7) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.3rem 0.75rem !important;
+  margin: 0 2px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: var(--color-10) !important;
+  color: #021F0F !important;
+  border-color: var(--color-10) !important;
+  font-weight: 700 !important;
+}
+
+table.dataTable {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+}
+
+table.dataTable thead th {
+  background: rgba(10, 52, 58, 0.95) !important;
+  color: var(--color-10) !important;
+  border-bottom: 2px solid var(--border-color) !important;
+  padding: 0.9rem 1rem !important;
+  font-weight: 700 !important;
+}
+
+table.dataTable tbody td {
+  padding: 0.8rem 1rem !important;
+  border-bottom: 1px solid rgba(50, 116, 109, 0.2) !important;
+  color: var(--text-primary) !important;
+}
+
+table.dataTable tbody tr:hover {
+  background: rgba(14, 64, 71, 0.5) !important;
+}
+
+[data-theme="light"] table.dataTable thead th {
+  background: #e2e8f0 !important;
+  color: #0A343A !important;
+}
+
+[data-theme="light"] table.dataTable tbody td {
+  color: #1e293b !important;
+}
+
+/* D. Widget Leaflet: Mapa Interactivo */
+.map-card {
+  margin-bottom: 2rem;
+}
+
+.map-card-header h3 {
+  color: var(--color-10);
+  margin-bottom: 0.3rem;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #0A343A !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+@media (max-width: 768px) {
+  .live-status-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .clima-success-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

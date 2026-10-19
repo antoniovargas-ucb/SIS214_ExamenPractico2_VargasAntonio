@@ -1,0 +1,138 @@
+/* ==========================================================================
+   VARIABLES DE DISEÑO Y TEMAS (CSS3 DESIGN TOKENS)
+   Materia: Tecnologías Web I [SIS-214] — Universidad Católica Boliviana (UCB)
+   Estudiante: Ing. Antonio Alexander Vargas Sosa
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES DE DISEÑO (DESIGN TOKENS EN :root)
+   Incluye obligatoriamente: colores principales, tipografías y unidades de
+   espaciado, conforme a los criterios de la rúbrica de evaluación.
+   PALETA DE TONO OSCURO AJUSTADA (REGLA 60-30-10):
+   - 60% Color Dominante (Terciario): #021F0F (Verde bosque profundo muy oscuro, sobrio y elegante)
+   - 30% Color Principal:            #0A343A (Azul petróleo oscurecido)
+   - 10% Color Secundario e Interac:  #32746D (Bordes, botones, indicadores, tabs)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colores principales (obligatorios según rúbrica) */
+  --primary-color: #0A343A;
+  --secondary-color: #32746D;
+  --tertiary-color: #021F0F;
+  --bg-color: #021F0F;
+  --text-color: #F8FAFC;
+  --font-family-base: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  --spacing-unit: 1rem;
+
+  /* Paleta Base Tono Oscuro (Regla 60-30-10) */
+  --color-60: #021F0F;
+  --color-30: #32746D;
+  --color-10: #38A394;
+
+  /* Fondos y Contenedores */
+  --bg-primary: #0A343A;
+  --bg-secondary: #021F0F;
+  --bg-tertiary: #0D353A;
+  --bg-card: rgba(10, 52, 58, 0.74);
+  --bg-card-hover: rgba(14, 64, 71, 0.90);
+
+  /* Tipografías y Textos */
+  --text-primary: #F8FAFC;
+  --text-secondary: #E2E8F0;
+  --text-muted: #94A3B8;
+  --text-bright: #FFFFFF;
+
+  /* 30% Secundario - Estructura, Bordes y Subtítulos (#32746D) */
+  --border-color: rgba(50, 116, 109, 0.40);
+  --border-color-hover: #32746D;
+  --border-focus: #32746D;
+
+  /* 10% Acento - Botones Primarios y Destacados (#32746D) */
+  --accent-color: #32746D;
+  --accent-contrast: #FFFFFF;
+  --accent-glow: rgba(50, 116, 109, 0.50);
+
+  /* Gradientes Armónicos */
+  --grad-primary: linear-gradient(135deg, #A2EBE3 0%, #38A394 60%, #32746D 100%);
+  --grad-card: linear-gradient(145deg, rgba(10, 52, 58, 0.75) 0%, rgba(2, 31, 15, 0.95) 100%);
+  --grad-btn: linear-gradient(135deg, #32746D 0%, #0A343A 100%);
+
+  /* Glassmorphism y Elevación */
+  --glass-bg: rgba(2, 31, 15, 0.94);
+  --glass-border: rgba(50, 116, 109, 0.32);
+  --glass-blur: blur(14px);
+  --glass-shadow: 0 12px 36px rgba(0, 15, 7, 0.60);
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 15, 7, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 15, 7, 0.50);
+  --shadow-glow: 0 0 24px rgba(50, 116, 109, 0.40);
+  --shadow-accent: 0 0 20px rgba(50, 116, 109, 0.45);
+
+  /* Tipografías */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-digital: 'DS-Digital', monospace;
+
+  /* Transiciones y Bordes */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Cabecera */
+  --header-height: 76px;
+}
+
+/* --------------------------------------------------------------------------
+   2. TEMA CLARO (LIGHT THEME) ACTIVADO POR [data-theme="light"]
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+  /* Colores principales obligatorios en tema claro */
+  --primary-color: #E8F5F3;
+  --secondary-color: #104F55;
+  --tertiary-color: #32746D;
+  --bg-color: #E8F5F3;
+  --text-color: #01200F;
+
+  /* Paleta Base Tema Claro (60-30-10) */
+  --color-60: #E8F5F3;
+  --color-30: #104F55;
+  --color-10: #32746D;
+
+  /* Fondos y Contenedores */
+  --bg-primary: #E8F5F3;
+  --bg-secondary: #D4ECE7;
+  --bg-tertiary: #C1E3DC;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card-hover: #FFFFFF;
+
+  /* Tipografías y Textos adaptados sobre fondo claro */
+  --text-primary: #01200F;
+  --text-secondary: #104F55;
+  --text-muted: #32746D;
+  --text-bright: #01200F;
+
+  /* 30% Secundario - #104F55 para bordes, estructuras y subtítulos */
+  --border-color: rgba(16, 79, 85, 0.22);
+  --border-color-hover: #104F55;
+  --border-focus: #104F55;
+
+  /* 10% Acento - #32746D para botones CTA e insignias */
+  --accent-color: #104F55;
+  --accent-contrast: #FFFFFF;
+  --accent-glow: rgba(16, 79, 85, 0.35);
+
+  --grad-primary: linear-gradient(135deg, #104F55 0%, #32746D 100%);
+  --grad-btn: linear-gradient(135deg, #104F55 0%, #32746D 100%);
+
+  --glass-bg: rgba(232, 245, 243, 0.94);
+  --glass-border: rgba(16, 79, 85, 0.18);
+  --glass-shadow: 0 10px 30px rgba(1, 32, 15, 0.08);
+
+  --shadow-sm: 0 2px 6px rgba(1, 32, 15, 0.06);
+  --shadow-md: 0 8px 20px rgba(1, 32, 15, 0.10);
+  --shadow-glow: 0 0 20px rgba(16, 79, 85, 0.20);
+}

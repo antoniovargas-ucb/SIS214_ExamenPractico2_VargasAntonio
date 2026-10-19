@@ -1,0 +1,18 @@
+/* ==========================================================================
+   HOJA DE ESTILOS MODERNA, MODULAR Y ACCESIBLE (CSS3 MOBILE-FIRST)
+   Materia: Tecnologías Web I [SIS-214] — Universidad Católica Boliviana (UCB)
+   Estudiante: Ing. Antonio Alexander Vargas Sosa
+   ==========================================================================
+   PUNTO DE ENTRADA Y MANIFIESTO MODULAR DE ESTILOS CSS:
+   1. variables.css  : Design tokens en :root, temas claro/oscuro (60-30-10) y paletas.
+   2. base.css       : Reset universal (*), estilos base de HTML/Body, tipografía y enlaces.
+   3. layout.css     : Arquitectura de diagramación, cabecera fija, navegación, main y footer.
+   4. components.css : Tarjetas de contenido, botones, modales, formularios y tablas.
+   5. animations.css : Transiciones, keyframes personalizados, animaciones y soporte AOS.
+   ========================================================================== */
+
+@import url('variables.css');
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('animations.css');

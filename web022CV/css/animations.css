@@ -1,0 +1,87 @@
+/* ==========================================================================
+   ANIMACIONES, KEYFRAMES Y TRANSICIONES CSS3
+   Materia: Tecnologías Web I [SIS-214] — Universidad Católica Boliviana (UCB)
+   Estudiante: Ing. Antonio Alexander Vargas Sosa
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. KEYFRAMES DE ANIMACIONES
+   -------------------------------------------------------------------------- */
+
+
+/* Efecto Deslizante de Entrada para el Toast de Conectividad */
+@keyframes slideToastIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Desvanecimiento y Elevación para Pantallas / Vistas */
+@keyframes screenFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brillo Pulsante Sutil de Acento */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 16px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(91, 197, 184, 0.65);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TRANSICIONES Y MICRO-INTERACCIONES
+   -------------------------------------------------------------------------- */
+
+/* Suavizado en la conmutación de pantallas activas */
+.cv-screen.is-active {
+  animation: screenFadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Optimización de transiciones de tarjetas y componentes */
+.content-card,
+.project-card,
+.service-card,
+.stat-card,
+.repo-card,
+.media-card {
+  will-change: transform, box-shadow;
+}
+
+/* Respeto estricto a las preferencias de accesibilidad del usuario */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .cv-screen {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  [data-aos] {
+    transition-property: none !important;
+    transform: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

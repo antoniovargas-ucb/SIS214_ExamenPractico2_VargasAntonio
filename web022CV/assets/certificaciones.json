@@ -1,0 +1,44 @@
+[
+  {
+    "certificacion": "Diplomado en Docencia Universitaria & Formación STEM",
+    "institucion": "Universidad Católica Boliviana \"San Pablo\"",
+    "anio": "2025",
+    "estado": "Vigente",
+    "horas": "240 hrs"
+  },
+  {
+    "certificacion": "Especialista en Automatización & Control PLC Siemens S7-1200",
+    "institucion": "Festo Didactic / AHK Bolivia",
+    "anio": "2024",
+    "estado": "Certificado",
+    "horas": "180 hrs"
+  },
+  {
+    "certificacion": "Desarrollo de Interfaces Web Dinámicas y Arquitectura Frontend ES6+",
+    "institucion": "Google Developers / Santander Open Academy",
+    "anio": "2024",
+    "estado": "Acreditado",
+    "horas": "140 hrs"
+  },
+  {
+    "certificacion": "Diseño Electrónico y Simulación de Circuitos Analógicos / KiCAD",
+    "institucion": "IEEE Robotics & Automation Society",
+    "anio": "2023",
+    "estado": "Certificado",
+    "horas": "90 hrs"
+  },
+  {
+    "certificacion": "Administración de Bases de Datos Relacionales & SQL Server",
+    "institucion": "Oracle Academy & Microsoft Learn",
+    "anio": "2023",
+    "estado": "Acreditado",
+    "horas": "160 hrs"
+  },
+  {
+    "certificacion": "Control Cinemático de Robots Móviles y Sensores Ultrasónicos",
+    "institucion": "Sociedad Boliviana de Robótica y Automatización",
+    "anio": "2022",
+    "estado": "Certificado",
+    "horas": "110 hrs"
+  }
+]
