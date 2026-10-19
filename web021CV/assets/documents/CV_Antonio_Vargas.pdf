@@ -1,0 +1,67 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3072 >>
+stream
+BT /F2 18 Tf 50 780 Td (ING. ANTONIO ALEXANDER VARGAS SOSA) Tj ET
+BT /F2 12 Tf 50 760 Td (Ingeniero de Sistemas e Ingeniero Mecatronico) Tj ET
+BT /F1 10 Tf 50 742 Td (La Paz, Bolivia | UCB San Pablo | Contacto: dev@antoniovargas.bo) Tj ET
+BT /F1 10 Tf 50 730 Td (----------------------------------------------------------------------------------------------------------------------------------) Tj ET
+BT /F2 13 Tf 50 712 Td (PERFIL PROFESIONAL) Tj ET
+BT /F1 10 Tf 50 695 Td (Ingeniero dedicado al desarrollo de software estructurado, tecnologias web modernas,) Tj ET
+BT /F1 10 Tf 50 682 Td (control automatico y docencia STEM universitaria. Solida experiencia en programacion) Tj ET
+BT /F1 10 Tf 50 669 Td (en C++, Python, JavaScript y automatizacion de procesos electromecanicos.) Tj ET
+BT /F2 13 Tf 50 647 Td (FORMACION ACADEMICA) Tj ET
+BT /F2 11 Tf 50 630 Td (Universidad Catolica Boliviana 'San Pablo' \(UCB\)) Tj ET
+BT /F1 10 Tf 60 615 Td (- Licenciatura en Ingenieria de Sistemas \(85% de avance academico culminado\)) Tj ET
+BT /F1 10 Tf 60 602 Td (- Licenciatura en Ingenieria Mecatronica \(62% de avance academico culminado\)) Tj ET
+BT /F2 11 Tf 50 585 Td (Colegio San Calixto) Tj ET
+BT /F1 10 Tf 60 570 Td (- Bachiller en Humanidades \(2010 - 2021\)) Tj ET
+BT /F2 13 Tf 50 548 Td (EXPERIENCIA LABORAL Y DOCENCIA) Tj ET
+BT /F2 11 Tf 50 531 Td (META & Proyectos Independientes \(2028 - Presente\)) Tj ET
+BT /F1 10 Tf 60 516 Td (- Liderazgo de proyectos de integracion tecnologica y sistemas automatizados.) Tj ET
+BT /F1 10 Tf 60 503 Td (- Arquitectura de software a medida, optimizacion de consultas SQL y dashboards.) Tj ET
+BT /F2 11 Tf 50 486 Td (Docente STEM Universitario & Tutor Academico - UCB \(2023 - Presente\)) Tj ET
+BT /F1 10 Tf 60 471 Td (- Imparticion de tutorias en calculo, fisica aplicada, electronica y programacion.) Tj ET
+BT /F1 10 Tf 60 458 Td (- Mas de 150 estudiantes guiados con exito en ciencias basicas e ingenieria.) Tj ET
+BT /F2 13 Tf 50 436 Td (HABILIDADES TECNICAS Y COMPETENCIAS) Tj ET
+BT /F1 10 Tf 60 419 Td (- Lenguajes: C++, Python, JavaScript \(ES6+\), Java, SQL, HTML5 Semantico, CSS3 Moderno.) Tj ET
+BT /F1 10 Tf 60 406 Td (- Control & Hardware: Microcontroladores ESP32/STM32, Arduino, PLC, Proteus, KiCAD.) Tj ET
+BT /F1 10 Tf 60 393 Td (- Idiomas: Espanol \(Nativo C2\), Ingles \(Avanzado B2\), Japones \(Basico A2\).) Tj ET
+BT /F2 13 Tf 50 371 Td (PROYECTOS DESTACADOS) Tj ET
+BT /F1 10 Tf 60 354 Td (1. Simulador Didactico Calxircuit: Aplicacion interactiva de circuitos electricos lineales.) Tj ET
+BT /F1 10 Tf 60 341 Td (2. SAMA Stock: Sistema de control de inventarios, trazabilidad y costos en Java y SQL.) Tj ET
+BT /F1 10 Tf 60 328 Td (3. Robot Movil Autonomo Raonmisk: Navegacion autonoma con firmware en C++ y ESP32.) Tj ET
+BT /F1 10 Tf 50 305 Td (----------------------------------------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 9 Tf 50 290 Td (Documento oficial generado para la Primera Evaluacion Practica - Tecnologias Web I [SIS-214] - UCB 2026) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000327 00000 n 
+0000000402 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3526
+%%EOF
